@@ -1,0 +1,87 @@
+.comworks-ab-portal {
+	padding: 30px;
+}	
+.comworks-ab-portal h1 {
+    font-weight: 700;
+    line-height: 1.4em;
+    padding-bottom: 30px;
+}
+.comworks-ab-portal .form-control {
+	padding-bottom: 15px;
+}
+.comworks-ab-portal .form-control label {
+	min-width: 120px;
+	display: inline-block;
+}
+.comworks-ab-portal .container {
+	padding: 30px 0;
+}
+
+.comworks-ab-portal table {
+    border-collapse:collapse;
+    border:.5px solid #E8F1F2;
+    text-align:left;
+    margin: 0 auto;
+}
+
+.comworks-ab-portal table > caption {
+    text-transform:uppercase;
+    font-weight:bolder;
+}
+
+.comworks-ab-portal th {
+    text-transform:uppercase;
+    background-color: #B5D333;
+    color:#000;
+    padding:10px 12px;
+    text-align:left;
+}
+
+.comworks-ab-portal tr:nth-child(even){
+background-color:#E5EFF0;
+}
+
+.comworks-ab-portal td[data-style="bold"]{
+  font-weight:bold;
+  color:#11202C;
+  border-right:1px solid #C5C7D3;
+}
+
+.comworks-ab-portal td {
+    padding: 6px 12px;
+    text-align:left;
+    color:#11202C;
+    border-bottom: 1px solid #C6E444;
+}
+
+.comworks-ab-portal tfoot {
+  background-color:#172A3A;
+  text-align:center;
+  color:#A4C8CB;
+}
+
+.comworks-ab-portal tbody > tr:hover {
+  background-color:#D7F555;
+}
+
+.comworks-ab-portal a.button.button-danger {
+    background: #df8181;
+    color: #fff;
+    border-color: #842525;
+}
+
+.comworks-ab-portal section {
+    padding: 0 0 30px;
+}
+.comworks-ab-portal section h4 {
+    border-bottom: 1px solid #C5C7D3;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.comworks-ab-portal section .form-control label {
+    min-width: 200px;
+}
+.comworks-ab-portal section .form-control input[type="text"] {
+    min-width: 300px;
+}

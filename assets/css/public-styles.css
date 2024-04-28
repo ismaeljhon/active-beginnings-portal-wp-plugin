@@ -1,0 +1,1312 @@
+.page-template-dashboard-template #content * {
+	font-family: 'Inter', sans-serif;
+    line-height: 1.2em;
+}
+.page-template-dashboard-template #content h1,
+.page-template-dashboard-template #content h2,
+.page-template-dashboard-template #content h3,
+.page-template-dashboard-template #content h4,
+.page-template-dashboard-template #content h5,
+.page-template-dashboard-template #content h6 {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.2em;
+}
+.page-template-dashboard-template #content {
+    background: #F6F5F0;
+    max-width: 100%;
+	padding: 30px 0;
+}
+.page-template-dashboard-template .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.tab-vertical {
+    display: flex;
+}
+.tab-vertical nav.nav-tab-wrapper {
+    background: #6DB2FF;
+	border-radius: 0px 20px 20px 0px;
+    box-shadow: 0px 4px 10px 0px #0000000D;
+    max-width: 300px;
+	padding: 60px 0;
+    vertical-align: top;
+    width: 100%;
+}
+.tab-vertical .tab-content {
+    width: 100%;
+    max-width: calc(100% - 304px);
+	padding: 0 30px 0 60px;
+}
+
+.tab-vertical nav.nav-tab-wrapper a.nav-tab {
+    display: block;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+}
+.tab-vertical nav.nav-tab-wrapper a.nav-tab.nav-tab-active {
+	font-weight: 600;
+}
+.tab-vertical nav.nav-tab-wrapper a.nav-tab img {
+    height: 18px;
+    margin-right: 10px;
+}
+.tab-vertical nav.nav-tab-wrapper a.nav-tab span {
+    vertical-align: top;
+    line-height: 1em;
+    font-size: 20px;
+}
+.tab-vertical nav a.nav-tab.nav-logout {
+    margin-top: 80px;
+}
+.tab-vertical nav a.nav-tab.nav-logout img {
+	margin-top: 3px;
+}
+.nav-item ul {
+    list-style: none;
+}
+.nav-item ul li,
+.nav-item ul li a {
+    padding: 0 0 5px 10px !important;
+}
+
+.tab-vertical .tab-content .container {
+	background: #fff;
+	border-radius: 20px;
+    box-shadow: 0px 4px 10px 0px #0000000D;
+	padding: 80px 50px;
+}
+
+.dashboard .container {
+    max-width: 1080px !important;
+    box-shadow: none !important;
+}
+.dashboard .heading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.dashboard .heading h2 {
+    color: #294146;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.dashboard .heading h6 {
+    color: #6DB2FF;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+.dashboard .heading p {
+    font-size: 18px;
+}
+
+.dashboard .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+.dashboard .blurb {
+    background: #B5D333;
+    border-radius: 20px;
+    flex-grow: 1;
+    text-align: center;
+    width: 31%;
+}
+.dashboard .blurb:nth-child(2) {
+    background: #6DB2FF;
+}
+.dashboard .blurb:nth-child(3) {
+    background: #C977DD;
+}
+.dashboard .blurb:hover {
+    opacity: 0.8;
+}
+.dashboard .blurb a {
+    display: block;
+    color: #fff;
+    padding: 80px 40px;
+    text-decoration: none;
+}
+.dashboard .blurb img {
+    display: block;
+    margin: 0 auto 40px;
+    height: 70px;
+}
+.dashboard .blurb span {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.page-template-dashboard-template #content label {
+    color: #294146;
+    font-size: 18px;
+    font-weight: 400;
+}
+.page-template-dashboard-template #content label .required {
+    color: #c74242;
+}
+
+.page-template-dashboard-template #content input[type="text"],
+.page-template-dashboard-template #content input[type="email"],
+.page-template-dashboard-template #content input[type="password"],
+.page-template-dashboard-template #content textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 0px #0000000D;
+    color: #294146;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    outline: none !important;
+    padding: 10px 15px;
+}
+
+.page-template-dashboard-template #content fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+.page-template-dashboard-template #content em {
+    font-size: 15px;
+}
+.page-template-dashboard-template #content button.woocommerce-Button.button {
+    background: #6DB2FF;
+    border-color: #6DB2FF;
+    color: #fff;
+    margin: 50px 0 0;
+}
+
+.page-template-dashboard-template .student-assessment .container {
+    box-shadow: none;
+    padding: 0;
+}
+.page-template-dashboard-template .student-assessment .heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.page-template-dashboard-template .student-assessment .heading .col {
+    flex: 1 1 20%; /*grow | shrink | basis */
+    height: 200px;
+}
+.page-template-dashboard-template .student-assessment .heading .col:nth-child(2) {
+    flex: 1 1 55%;
+}
+.page-template-dashboard-template .student-assessment .heading .col:nth-child(2) {
+    text-align: center;
+}
+.page-template-dashboard-template .student-assessment .heading .col:nth-child(3) {
+    text-align: right;
+}
+.student-assessment h6 {
+	color: #6db2ff;
+    font-size: 24px !important;
+	font-weight: 400 !important;
+	margin: 0;
+}
+.student-assessment p {
+	display: block;
+	text-align: center;
+}
+.student-assessment a.btn,
+.student-assessment button.btn {
+    background: #6db2ff;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 10px 10px 0;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+.student-assessment a.btn.btn-green {
+	background: #b9d533;
+	margin: 10px 0 10px 0;
+}
+.student-assessment .content {
+    display: block;
+    margin: 60px 0 0;
+}
+.student-assessment .greetings {
+	background: #F6F5F0;
+	border-radius: 10px;
+	padding: 30px 40px;
+}
+.student-assessment .greetings p {
+	font-size: 24px;
+}
+.student-assessment .greetings p:last-child {
+	font-size: 20px;
+}
+.student-assessment .assessment {
+    border: 1px solid #6DB2FF;
+    border-radius: 20px;
+    display: block;
+    margin-top: 60px;
+    padding: 60px 40px;
+}
+.student-assessment .assessment h3 {
+	color: #6DB2FF;
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.2em;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.assessment .score {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+	align-items: baseline;
+}
+.assessment .score .col {
+    border-radius: 20px;
+    flex-grow: 1;
+    width: 31%;
+    text-align: right;
+    display: block;
+}
+.assessment .score .col:last-child {
+    text-align: left;
+}
+.student-assessment .score p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: revert;
+}
+.student-assessment .score p span.score {
+    background: #C977DD;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 12px 15px;
+    text-align: center;
+    width: 140px;
+}
+.student-assessment .score p span.avg {
+	background: #6DB2FF;
+}
+.student-assessment .score data {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+.student-assessment .score data span {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+}
+.student-assessment .score-graph {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    max-width: 720px;
+    margin: 50px auto 30px;
+    align-items: center;
+    justify-content: center;
+}
+.student-assessment .score-graph .col {
+    border-radius: 20px;
+    flex-grow: 1;
+    width: 50px;
+    text-align: right;
+    display: block;
+}
+.student-assessment .score-graph .col:last-child {
+    width: calc(100% - 70px);
+}
+.student-assessment .score-graph .graph {
+    background: url(../img/bg-graph.svg) no-repeat;
+    background-size: contain;
+    min-height: 200px;
+    padding: 0 15px 0 16px;
+}
+.student-assessment .score-graph p {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+.student-assessment .score-graph .graph-container p {
+    margin: 0 0 20px 15px;
+}
+.graph-container .bar {
+    background: #6db2ff;
+    color: #fff;
+    display: block;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    position: relative;
+    top: 25px;
+}
+.graph-container .bar.bar-pink {
+    background: #c977dd;
+}
+.skill-description {
+    background: #F6F5F0;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: left;
+}
+.skill-description h6 {
+	color: #294146;
+	font-family: "Poppins", sans-serif;
+	font-size: 22px !important;
+	font-weight: 600 !important;
+	line-height: 1.4em;
+	padding-bottom: 15px;
+}
+.skill-description p {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4em !important;
+}
+.student-assessment  p.date {
+    font-size: 18px;
+    font-weight: 400;
+	margin-bottom: 30px;
+}
+.student-assessment p.date span {
+    font-weight: 600;
+}
+
+.page-template-dashboard-template .students .container {
+	box-shadow: none;
+	padding: 0;
+}
+.students .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 3%;
+}
+.dashboard.centre-students h6 {
+    margin-bottom: 0;
+}
+.students .form-control,
+.dashboard .form-control {
+    max-width: 400px;
+    padding-bottom: 40px;
+}
+.students select,
+.dashboard select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 0px #0000000D;
+    color: #294146;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    outline: none !important;
+    padding: 10px 15px;
+
+}
+.students .blurb {
+    border-radius: 20px;
+    flex-grow: 1;
+    text-align: center;
+    width: 31%;
+}
+.students .blurb:nth-child(4n + 1) {
+	background: #B5D333;
+}
+.students .blurb:nth-child(4n + 2) {
+	background: #6DB2FF;
+}
+.students .blurb:nth-child(4n + 3) {
+	background: #C977DD;
+}
+.students .blurb:nth-child(4n + 4) {
+	background: #ff5b47;
+}
+.students .blurb:hover {
+    opacity: 0.8;
+}
+.students .blurb a {
+    display: block;
+    padding: 70px 40px;
+	text-decoration: none;
+}
+.students .blurb a img {
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+.students .blurb a span {
+	display: block;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+p.warning {
+    background: #ee8080;
+    border-radius: 10px;
+    box-shadow: 1px 3px 9px rgb(120, 60, 60, 0.7);
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding: 15px 25px;
+}
+.page-template-dashboard-template form.woocommerce-EditAccountForm.edit-account {
+    max-width: 600px;
+}
+.page-template-dashboard-template #content span.error,
+.page-template-dashboard-template #content label.error {
+    width: 100%!important;
+    color: #c54949;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 4px 0;
+}
+.nav-tab-wrapper > #nav-check {
+    display: none;
+}
+
+.centre-students .container {
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.centre-students table {
+    border-collapse: separate; 
+    border-spacing: 0 10px;
+}
+.centre-students table tr td {
+    background: #F6F5F0;
+    color: #6DB2FF;
+    padding: 20px 15px !important;
+}
+.centre-students table tr:first-child td {
+    background: #6DB2FF;
+    color: #fff;
+}
+
+.centre-students table td {
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.centre-students table tr td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.centre-students table td:nth-child(2) {
+    color: #294146;
+}
+.centre-students table tr:first-child td {
+    color: #fff;
+}
+.centre-students table td:last-child {
+    border-radius: 0 10px 10px 0;
+    text-align: right;
+}
+.centre-students table td a {
+    background: #b5d332;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 25px;
+    text-decoration: none;
+}
+.centre-students table a.activate {
+    background: #C977DD;
+}
+.centre-students table td a.link {
+    background: transparent;
+    color: #6DB2FF;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0;
+    text-decoration: none;
+}
+
+.student-profile .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 1%;
+}
+.col.profile-image {
+    width: 200px;
+}
+.profile-image img {
+    background: #b5d332;
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+.col.profile-details {
+    background: #F6F5F0;
+    border-radius: 20px;
+    padding: 40px 20px;
+    width: calc(100% - 210px);
+}
+.profile-details ul {
+    list-style: none;
+    padding-left: 20px;
+}
+.profile-details ul li,
+.profile-details ul li p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.profile-details ul li span {
+    font-weight: 600;
+}
+.profile-details ul li.comments {
+    margin-top: 30px;
+}
+.profile-details ul li a.btn {
+    background: #b5d332;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 25px;
+    text-decoration: none;
+}
+.profile-details ul li a.btn.activate {
+    background: #C977DD;
+}
+.centre-report .skill {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 50px;
+    padding: 40px 0 50px;
+}
+.centre-report .skill .data {
+    width: 650px;
+}
+.centre-report .skill .data th,
+.centre-report .skill .data td {
+    padding: 5px;
+}
+.centre-report .skill .data th:not(:first-child),
+.centre-report .skill .data td:not(:first-child) {
+    text-align: right;
+}
+.centre-report .skill td img {
+    padding: 0 0 0 4px;
+    vertical-align: bottom;
+}
+.centre-report .skill td img.down {
+    padding: 0 4px 0 0;
+    transform: rotate(180deg);
+}
+.centre-report .skill .comments {
+    font-size: 16px;
+}
+.centre-report .report-graph {
+    display: block;
+    margin: 40px 0;
+    min-height: 200px;
+    padding-left: 30px;
+    position: relative;
+}
+.centre-report .report-graph .graph-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 30px;
+    height: 100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #666;
+}
+.centre-report .graph-bg:before {
+    content: "100";
+    position: absolute;
+    top: -10px;
+    left: -30px;
+}
+.centre-report .graph-bg:after {
+    content: "0";
+    position: absolute;
+    bottom: -6px;
+    left: -30px;
+}
+.centre-report .report-graph .graph-bg span {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    height: 25%;
+    position: relative;
+}
+.centre-report .report-graph .graph-bg span:first-child:before {
+    content: "75";
+    position: absolute;
+    bottom: -6px;
+    left: -30px;
+}
+.centre-report .report-graph .graph-bg span:nth-child(2):before {
+    content: "50";
+    position: absolute;
+    bottom: -6px;
+    left: -30px;
+}
+.centre-report .report-graph .graph-bg span:nth-child(3):before {
+    content: "25";
+    position: absolute;
+    bottom: -6px;
+    left: -30px;
+}
+.graph-stats {
+    display: table;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 1px;
+    position: relative;
+    z-index: 10;
+}
+.row {
+    display: table-row;
+}
+.stat {
+    display: table-cell;
+    height: 200px;
+    position: relative;
+    vertical-align: bottom;
+}
+.stat span {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    right: 0;
+}
+.stat .bar {
+    background-color: #ffd480;
+    color: #000;
+    display: inline-block;
+    margin-right: 2px;
+    padding: 5px;
+    vertical-align: bottom;
+}
+.stat .bar2 {
+    background: #da81f6;
+}
+.stat .bar3 {
+    background: #58acfa;
+}
+.graph-legends {
+    text-align: center;
+}
+.graph-legends span {
+    margin-right: 20px;
+}
+.graph-legends span:before {
+    content: "";
+    background-color: #ffd480;
+    display: inline-block;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: top;
+    width: 15px;
+}
+.graph-legends span:nth-child(2):before {
+    background: #da81f6;
+}
+.graph-legends span:nth-child(3):before {
+    background: #58acfa;
+}
+
+.centre-students .form-control {
+    display: block;
+    max-width: 100%;
+    padding: 100px 60px;
+    border: 1px solid #6db2ff;
+    border-radius: 10px;
+}
+.centre-students form {
+    background: #efefef;
+    padding: 40px 30px;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 460px;
+}
+.centre-students form .btn {
+    background: #6db2ff;
+    margin-top: 15px;
+    min-width: 180px;
+}
+.centre-report .skill h4 label {
+    color: #6db2ff !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+}
+.centre-report .skill h4 input {
+    display: inline-block;
+    vertical-align: top;
+    margin: 12px 10px 0 0;
+}
+
+
+.heading-note {
+    background: #F6F5F0;
+    border-radius: 20px;
+    display: block;
+    margin: 0 0 30px 0;
+    padding: 30px 0 20px;
+}
+.gmp .stat .bar:first-child {
+    background-color: #B5D333;
+}
+.gmp .stat .bar {
+    color: #fff;
+    font-weight: 600;
+}
+.gmp .skills-steps {
+    overflow: hidden;
+    position: relative;
+}
+.gmp .skill {
+    position: relative;
+}
+.gmp .skill .graph-legends {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.gmp .graph-legends span:first-child:before {
+    background-color: #B5D333;
+}
+.gmp .skill .graph-legends span {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+}
+.gmp .form-actions {
+    padding: 10px 0;
+    position: relative;
+}
+.gmp a.btn {
+    background: #F6F5F0;
+    border: 1px solid #58acfa;
+    border-radius: 30px;
+    color: #58acfa;
+    font-weight: 600;
+    padding: 12px 50px;
+    text-decoration: none;
+}
+.gmp button.btn {
+    background: #58acfa;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 50px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+}
+
+.gmp a.expand-description {
+    margin-top: 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+.gmp .skill-description {
+    display: none;
+    margin-bottom: 20px;
+    padding: 15px 20px;    
+}
+.gmp .skill-description.show {
+    display: block;
+}
+.gmp .skill-description h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.gmp .form-control {
+    margin-bottom: 15px;
+}
+.gmp .skill-description p {
+    font-size: 16px;
+}
+.gmp .skill-step-desc {
+    background: #F6F5F0;
+    border-radius: 15px;
+    display: none;
+    margin: 15px 0 30px 15px;
+    padding: 15px 20px;
+}
+.gmp .skill-step-desc.show {
+    display: block;
+}
+.gmp .skill-step-desc h6 {
+    font-size: 16px;
+}
+.gmp label.emp-label {
+    color: #294146 !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 28px !important;
+    margin-bottom: 10px;
+}
+.gmp .skill-done {
+    text-align: center;
+}
+
+.gmp .form-error {
+    background: rgba(218, 114, 114, 0.8);
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px 30px 1px;
+}
+.gmp .form-error p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.gmp .heading-note p {
+    text-align: center;
+}
+.gmp .form-steps {
+    overflow: hidden;
+    position: relative;
+}
+
+.gmp .skill-select .skill-actions {
+    display: none;
+}
+.gmp .skill-select .skill-actions.show {
+    background: #F6F5F0;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 30px;
+    padding: 30px 30px;
+}
+.gmp .student-selections .student-select {
+    display: none;
+}
+.gmp .student-selections .student-select.student-selected {
+    display: block;
+}
+.gmp .skill-select .skill-actions label {
+    font-size: 20px !important;
+}
+.gmp .skill-select .skill-actions .skill-step-desc-show {
+    margin-bottom: 30px;
+    display: block;
+}
+.gmp .skill-select .skill-actions label.emp-label,
+.gmp .skill-select .skill-actions h6 {
+    font-size: 16px !important;
+}
+.gmp .step-4 .skill {
+    border: 1px solid #6db2ff;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+.gmp.student-assessment .container {
+    max-width: 1280px !important;
+}
+.gmp .centre-heading h3 {
+    color: #6db2ff;
+    text-align: center;
+}
+.gmp.student-assessment form {
+    position: relative;
+}
+.gmp.student-assessment form button.btn {
+    position: relative;
+}
+.gmp .reports-container {
+    overflow: hidden;
+    position: relative;
+}
+.gmp.centre-report .report-graph {
+    margin: 40px 0 60px;
+}
+.gmp .stat span {
+    bottom: -42px;
+}
+.gmp .gmp-table {
+    margin: 0 auto;
+    max-width: 700px;
+}
+.gmp .gmp-table th {
+    background: #6db2ff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.gmp .gmp-table td {
+    padding: 6px;
+    text-align: center;
+}
+.gmp .gmp-table td a {
+    color: #6db2ff !important;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.gmp .gmp-table td form {
+    display: inline-block;
+}
+.gmp .gmp-table td form.pdf-report-form {
+    margin-right: 10px;
+}
+.gmp .gmp-table td button {
+    display: inline-block;
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    color: #6db2ff !important;
+}
+
+.gmp.assign-staff {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.gmp select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #666;
+    outline: none;
+    padding: 10px 12px;
+}
+
+@media (max-width: 1370px) {
+    .tab-vertical nav.nav-tab-wrapper {
+        max-width: 250px;
+    }
+    .tab-vertical .tab-content .container {
+        padding: 60px 30px;
+    }
+    .gmp .stat .bar {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 3px;
+    }
+}
+@media (max-width: 1250px) {
+    .student-assessment .assessment {
+        padding: 40px 25px;
+    }
+    .student-assessment .content {
+        margin: 10px 0 0;
+    }
+    .student-assessment .assessment h3 {
+        font-size: 32px;
+    }
+    .student-assessment p {
+        font-size: 16px;
+    }
+    .student-assessment .score p {
+        font-size: 16px;
+    }
+    .student-assessment .score p span.score {
+        font-size: 18px;
+        width: 80px;
+    }
+    .student-assessment .score-graph p {
+        font-size: 18px;
+    }
+    .student-assessment .score-graph .graph {
+        padding: 0 0 0 4px;
+        background-position-x: -9px;
+    }
+    .graph-container .bar {
+        font-size: 16px;
+        padding: 8px 20px;
+        top: 30px;
+    }
+}
+
+@media (max-width: 1140px) {
+.tab-vertical .tab-content {
+        padding: 0 0 0 60px;
+    }
+    
+    .page-template-dashboard-template .container {
+        padding-top: 0; 
+    }
+    .page-template-dashboard-template .tab-vertical {
+        display: block;
+        position: relative;
+    }
+
+    .tab-vertical .tab-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 30px 0 30px !important;
+    }
+    .tab-vertical nav.nav-tab-wrapper {
+        max-width: 50px;
+        width: auto;
+        padding: 10px 0;
+        margin-bottom: 60px;
+        margin-left: 0;
+        border-radius: 5px;
+    }
+    .nav-tab-wrapper > .nav-btn {
+        background-color: #6DB2FF;
+        border-radius: 5px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 0.2rem;
+      }
+      .nav-tab-wrapper > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+    .nav-tab-wrapper > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+      .nav-tab-wrapper > .nav-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #6db2ff;
+        height: 0;
+        transition: all 0.3s ease-in;
+        top: 50px;
+        left: 0;
+        overflow: hidden;
+      }
+      .tab-vertical nav.nav-tab-wrapper a.nav-tab {
+        padding: 30px 25px 0;
+    }
+    .nav-tab-wrapper > #nav-check:checked ~ .nav-list {
+        height: calc(100vh - 50px);
+		z-index: 99;
+    }
+    .assessment .score .col {
+        width: 100%;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tab-vertical .tab-content .container {
+        padding: 40px 15px;
+    }
+    .student-assessment .score-graph .col:first-child {
+        display: none;
+    }
+    .student-assessment .score-graph .graph {
+        padding: 0 20px 0 4px;
+    }
+    .graph-container .bar {
+        font-size: 14px;
+        padding: 6px 14px;
+        top: 20px;
+    }
+}
+
+@media (max-width: 980px) {
+    .page-template-dashboard-template .container {
+        padding-top: 0;
+    }
+    .page-template-dashboard-template .tab-vertical {
+        display: block;
+        position: relative;
+    }
+
+    .tab-vertical .tab-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 30px 0 30px !important;
+    }
+    .tab-vertical nav.nav-tab-wrapper {
+        max-width: 50px;
+        width: auto;
+        padding: 10px 0;
+        margin-bottom: 60px;
+        margin-left: 0;
+        border-radius: 5px;
+    }
+    .nav-tab-wrapper > .nav-btn {
+        background-color: #6DB2FF;
+        border-radius: 5px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 0.2rem;
+      }
+      .nav-tab-wrapper > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+      .nav-tab-wrapper > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+      .nav-tab-wrapper > .nav-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #6db2ff;
+        height: 0;
+        transition: all 0.3s ease-in;
+        top: 50px;
+        left: 0;
+        overflow: hidden;
+      }
+      .tab-vertical nav.nav-tab-wrapper a.nav-tab {
+        padding: 35px 25px 0;
+    }
+    .nav-tab-wrapper > #nav-check:checked ~ .nav-list {
+        height: calc(100vh - 50px);
+		z-index: 99;
+    }
+    .dashboard .blurb {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .student-assessment .score-graph .graph {
+        padding: 0 20px 0 8px;
+        background-position-x: -10px;
+    }
+    
+    .centre-report .graph-bg {
+        display: none;
+    }
+    .centre-report .graph-stats .row {
+        display: block;
+    }
+    .centre-report .graph-stats .stat {
+        display: inline-block;
+        position: relative;
+        background: url('../img/bg-graph-table-mb.png') no-repeat;
+        background-size: contain;
+        margin-bottom: 60px;
+        margin-right: 30px;
+        width: 300px;
+    }
+    .stat .bar {
+        position: absolute;
+        bottom: 1px;
+        left: 40px;
+    }
+    .stat .bar2 {
+        left: 80px;
+    }
+    .stat .bar3 {
+        left: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-template-dashboard-template .student-assessment .heading {
+        display: block;
+    }
+    .page-template-dashboard-template .student-assessment .heading .col,
+    .page-template-dashboard-template .student-assessment .heading .col:nth-child(3) {
+        text-align: center;
+    }
+    .student-assessment .score p span.score {
+        display: block;
+        margin: 0 auto;
+    }
+    .student-assessment .assessment {
+        padding: 20px 5px;
+    }
+    .student-assessment .score-graph .graph {
+        background-position-x: 0;
+        padding: 0 10px 0 10px;
+    }
+    .page-template-dashboard-template .students .blurb {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .skill-description {
+        padding: 30px 20px;
+    }
+    .skill-description h6 {
+        font-size: 16px !important;
+        padding-bottom: 15px;
+    }
+    .student-assessment p {
+        font-size: 14px;
+    }
+    
+    .centre-report .skill .data {
+        width: 100%;
+    }
+    table.data thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+      
+    table.data tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+      
+    table.data td {
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+      
+    table.data td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+      
+    table.data td:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .tab-vertical .tab-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px 0 10px !important;
+    }
+    .tab-vertical .tab-content .container {
+        padding: 20px 10px;
+    }
+    .student-assessment .score-graph .graph {
+        background-position-x: 0;
+        padding: 0 8px 0 8px;
+    }
+    .graph-container .bar {
+        font-size: 10px;
+        padding: 6px 14px;
+        top: 14px;
+    }
+
+}
