@@ -39,6 +39,8 @@ class Comworks_GF_Signup {
         $password = $entry['7'];
 
         $user_id = wp_create_user($email, $password, $email);
+        $user_id_role = new WP_User($user_id);
+        $user_id_role->set_role('parent_role');
         GFAPI::update_entry_field($entry['id'], 8, md5($email));
         
         if (is_wp_error($user_id)) {
