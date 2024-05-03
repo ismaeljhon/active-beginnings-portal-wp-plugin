@@ -37,10 +37,20 @@ class Comworks_GF_Signup {
     public function parent_registration( $entry, $form ) {
         $email = $entry['6'];
         $password = $entry['7'];
+        $uid = substr( uniqid(), -8 ) . '-' .
+            substr( uniqid(), 0, 4 ) . '-' .
+            substr( uniqid(), -4 ) . '-' .
+            substr( uniqid(), -8, 4 ) . '-' .
+            substr( md5($email), -12 );
+        $full_name = $entry['1'] . ' ' . $entry['3'];
 
+        // Add record to wp db
         $user_id = wp_create_user($email, $password, $email);
         $user_id_role = new WP_User($user_id);
         $user_id_role->set_role('parent_role');
+        update_user_meta( $user_id, 'full_name', $full_name );
+        update_user_meta( $user_id, 'portal_uid', $uid );
+
         GFAPI::update_entry_field($entry['id'], 8, md5($email));
         
         if (is_wp_error($user_id)) {
@@ -48,15 +58,10 @@ class Comworks_GF_Signup {
             return;
         }
 
-        $uid = substr( uniqid(), -8 ) . '-' .
-            substr( uniqid(), 0, 4 ) . '-' .
-            substr( uniqid(), -4 ) . '-' .
-            substr( uniqid(), -8, 4 ) . '-' .
-            substr( md5($email), -12 );
-
+        // add user record to fred (Portal)
         $user_data = array(
             'username' => $email,
-            'full_name' => $entry['1'] . ' ' . $entry['3'],
+            'full_name' => $full_name,
             'email' => $email,
             'report_email' => $email,
             'phone' => $entry['4'],
