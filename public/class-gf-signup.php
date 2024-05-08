@@ -42,14 +42,18 @@ class Comworks_GF_Signup {
             substr( uniqid(), -4 ) . '-' .
             substr( uniqid(), -8, 4 ) . '-' .
             substr( md5($email), -12 );
-        $full_name = $entry['1'] . ' ' . $entry['3'];
+        $first_name = $entry['1'];
+        $last_name = $entry['3'];
+        $full_name = $first_name . ' ' . $last_name;
 
         // Add record to wp db
         $user_id = wp_create_user($email, $password, $email);
         $user_id_role = new WP_User($user_id);
-        $user_id_role->set_role('parent_role');
+        // $user_id_role->set_role('parent_role');
         update_user_meta( $user_id, 'full_name', $full_name );
         update_user_meta( $user_id, 'portal_uid', $uid );
+        update_user_meta( $user_id, 'first_name',  $first_name );
+        update_user_meta( $user_id, 'last_name', $last_name );
 
         GFAPI::update_entry_field($entry['id'], 8, md5($email));
         

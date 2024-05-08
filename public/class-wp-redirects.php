@@ -34,12 +34,25 @@ class Comworks_WP_Redirects {
     function redirect_login_page() {
         $login_page  = home_url( '/login/' );
         $page_viewed = basename($_SERVER['REQUEST_URI']);
-        
-        if ( isset($_GET['verification']) ) {
+
+        if ( isset($_GET['verification']) && isset($_GET['user']) ) {
             $verification_code = $_GET['verification'];
             $email = $_GET['user'];
-
             
+            // TODO: update post meta for parent to determine if verified
+            $user = get_user_by('email', $email);
+            $user_id_role = new WP_User($user->ID);
+
+            if ( $verification_code != md5($user->user_email) ) {
+                wp_redirect($login_page . '?login=unverified');
+                exit;
+            }
+
+            $user_id_role->set_role('parent_role');
+            update_user_meta( $user->ID, 'first_login', 1 );
+
+            wp_redirect( $login_page . '?login=verified' );
+            exit;
         }
 
         if ( $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
