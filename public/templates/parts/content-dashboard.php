@@ -19,21 +19,28 @@ $assessment_link = isset($user->roles) && $user->roles[0] == 'centre_user_role' 
                     <span><?php echo get_option( 'pd_assess_text' ); ?></span>
                 </a>
             </div>
-            <?php if ( isset($user->roles) && $user->roles[0] == 'centre_user_role' ) : ?>
-            <div class="blurb">
-                <a href="?tab=centre-report">
-                    <img width="80" height="70" src="<?php echo PORTAL_URL . 'assets/img/icon-graph.svg'?>" alt="icon-dashboard" />
-                    <span>Centre Report</span>
-                </a>
-            </div>
-            <?php endif; ?>
-            <?php if ( isset($user->roles) && $user->roles[0] != 'centre_user_role' ) : ?>
-            <div class="blurb">
-                <a href="?tab=my-account">
-                    <img width="80" height="70" src="<?php echo PORTAL_URL . 'assets/img/icon-user.svg'?>" alt="icon-dashboard" />
-                    <span><?php echo get_option( 'pd_account_text' ); ?></span>
-                </a>
-            </div>
+            <?php if ( isset($user->roles) ): ?>
+                <?php if ( $user->roles[0] == 'centre_user_role' ): ?>
+                    <div class="blurb">
+                        <a href="?tab=centre-report">
+                            <img width="80" height="70" src="<?php echo PORTAL_URL . 'assets/img/icon-graph.svg'?>" alt="icon-dashboard" />
+                            <span>Centre Report</span>
+                        </a>
+                    </div>
+                <?php else: ?>
+                    <div class="blurb">
+                        <a href="?tab=my-account">
+                            <img width="80" height="70" src="<?php echo PORTAL_URL . 'assets/img/icon-user.svg'?>" alt="icon-dashboard" />
+                            <span><?php echo get_option( 'pd_account_text' ); ?></span>
+                        </a>
+                    </div>
+                    <div class="blurb">
+                        <a href="?tab=contact-us">
+                            <img width="80" height="70" src="<?php echo PORTAL_URL . 'assets/img/icon-email.svg'?>" alt="icon-email" />
+                            <span><?php echo get_option( 'pd_contact_text' ); ?></span>
+                        </a>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>
