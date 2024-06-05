@@ -382,7 +382,8 @@
     font-weight: 600;
 }
 
-.page-template-dashboard-template .students .container {
+.page-template-dashboard-template .students .container,
+.page-template-dashboard-template .student-registration {
 	box-shadow: none;
 	padding: 0;
 }
@@ -474,7 +475,8 @@ p.warning {
     display: none;
 }
 
-.centre-students .container {
+.centre-students .container,
+.student-registration .container {
     box-shadow: none !important;
     padding: 0 !important;
 }
@@ -974,6 +976,104 @@ p.warning {
     color: #666;
     outline: none;
     padding: 10px 12px;
+}
+
+.hide-required-label .gfield_required_text {
+    display: none !important;
+}
+.student-registration .container {
+    max-width: 100% !important;
+}
+.student-registration .heading-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.student-registration .heading h6 {
+    margin-bottom: 0;
+}
+.student-registration .heading h2 {
+    font-size: 42px;
+}
+.student-registration .heading p {
+    font-size: 20px;
+    background-color: #F6F5F0;
+    padding: 35px 20px;
+    border-radius: 20px;
+}
+
+.student-registration .gform_wrapper {
+    width: 100% !important;
+}
+
+.student-registration .intro {
+    border-radius: 20px;
+    text-align: center;
+    background: #F6F5F0;
+    min-height: 95px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.page-template-dashboard-template #content .student-registration .consent {
+    text-align: center;
+    margin-top: -30px;
+}
+.page-template-dashboard-template #content .student-registration .consent label {
+    margin-top: -2px;
+    margin-left: 10px;
+}
+.page-template-dashboard-template #content .student-registration .gfield_checkbox label,
+.page-template-dashboard-template #content .student-registration .gfield_consent_label,
+.page-template-dashboard-template #content .student-registration .gfield_radio label,
+.page-template-dashboard-template #content .student-registration input[type=checkbox], 
+.page-template-dashboard-template #content .student-registration input[type=radio] {
+    cursor: pointer;
+}
+.page-template-dashboard-template #content .student-registration input[type=checkbox], 
+.page-template-dashboard-template #content .student-registration input[type=radio] {
+    border: 2px solid #B5D333;
+    background-color: #F6F5F0;
+}
+.page-template-dashboard-template #content .student-registration h3 {
+    color: #6DB2FF;
+    font-weight: 600;
+    font-size: 36px;
+}
+.page-template-dashboard-template #content .student-registration .gfield_label {
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 24px;
+}
+.page-template-dashboard-template #content .student-registration fieldset.gfield--type-choice,
+.page-template-dashboard-template #content .student-registration fieldset.gfield--type-date,
+.student-registration .gform-theme--framework .gfield--type-repeater .gfield_repeater_wrapper {
+    border: 0;
+    padding: 0;
+}
+.student-registration .gform-theme--framework .gfield--type-repeater .gfield_repeater_wrapper .gfield_repeater_container > legend {
+    display: none;
+}
+.page-template-dashboard-template #content .gfield_repeater_wrapper  fieldset.gfield_repeater_container {
+    border-radius: 20px;
+    border-color: #6DB2FF;
+}
+.page-template-dashboard-template #content .student-registration .gfield_repeater_items .gfield_repeater_item .gfield_repeater_buttons .add_repeater_item {
+    float: right;
+}
+.page-template-dashboard-template #content .student-registration .gform-theme-button {
+    background: #6DB2FF;
+    border: 0 none;
+    color: #fff;
+    min-width: 235px;
+    min-height: 50px;
+    font-size: 19px;
+    font-family: 'Poppins';
+    border-radius: 100px;
+}
+.page-template-dashboard-template #content .student-registration .gform-theme-button.remove_repeater_item {
+    background-color: #e75858;
 }
 
 @media (max-width: 1370px) {

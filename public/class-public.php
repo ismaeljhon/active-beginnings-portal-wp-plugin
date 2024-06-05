@@ -15,8 +15,9 @@ class Comworks_Public {
             'register-templates',
             'shortcodes',
             'woocommerce-hooks',
-            //'gf-forms',
+            'gf-forms',
             'gf-signup',
+            'gf-student-registration',
             'wp-ajax',
             'wp-redirects'
         );

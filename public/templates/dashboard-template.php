@@ -21,8 +21,11 @@ $user = new WP_User($user_id);
 $p_assessments = $assessments_obj->get_assessment_by_parent($uuid);
 $tab = $_GET['tab'] ?? null;
 
-
-if ( isset($user->roles) && ($user->roles[0] == 'parent_role' || $current_user->roles[0] == 'centre_user_role') && get_user_meta( $user_id, 'first_login', true ) != '1' ) {
+if ( 
+    isset($user->roles) 
+    && ($user->roles[0] == 'parent_role' || $current_user->roles[0] == 'centre_user_role') 
+    && get_user_meta( $user_id, 'first_login', true ) != '1' 
+) {
     $tab = 'password-change';
 }
 
@@ -140,6 +143,22 @@ get_header();
                                 <img width="20" src="<?php echo PORTAL_URL . 'assets/img/icon-user.svg'?>" alt="icon-user" />
                                 <span>My Account</span>
                             </a>
+                            <?php if ($tab == 'my-account'): ?>
+                                <ul>
+                                    <?php if ($user->roles[0] == 'parent_role'): ?>
+                                        <li>
+                                            <a href="?tab=student-registration" class="nav-tab">
+                                                <span>Registration Form</span>
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+                                    <li>
+                                        <a href="?tab=my-account" class="nav-tab <?php if ($tab == 'my-account'): ?>nav-tab-active<?php endif; ?>">
+                                            <span>Account Details</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                         <div class="nav-item">
                             <a href="?tab=contact-us" class="nav-tab <?php if( $tab == 'contact-us' ):?>nav-tab-active<?php endif; ?>">
@@ -206,6 +225,9 @@ get_header();
                             break;
                         case 'my-account':
                             require_once PORTAL_URI . 'public/templates/parts/content-account.php';
+                            break;
+                        case 'student-registration':
+                            require_once PORTAL_URI . 'public/templates/parts/content-student-registration.php';
                             break;
                         case 'password-change':
                             echo "<p class='warning'>Please change your password and update your details to proceed using the site</p>";

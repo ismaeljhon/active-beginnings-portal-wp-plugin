@@ -9,6 +9,10 @@ class Students {
         $this->conn = $db;
     }
 
+    public function set_student ($student) {
+        $this->student = $student; 
+    }
+
     function get_all() {
         $query = "SELECT * FROM " . $this->table_name;
         
@@ -234,6 +238,8 @@ class Students {
 
     function create() {
         $query = "INSERT INTO  " . $this->table_name . " (
+                    `FirstName`,
+                    `LastName`,
                     `FullName`,
                     `Comment`,
                     `DOB`,
@@ -244,6 +250,8 @@ class Students {
                     `Status`
                 )
                 VALUES (
+                    '" . $this->student['first_name'] . "',
+                    '" . $this->student['last_name'] . "',
                     '" . $this->student['fullname'] . "',
                     '" . $this->student['comment'] . "',
                     '" . $this->student['dob'] . "',
