@@ -1003,10 +1003,15 @@ p.warning {
     border-radius: 20px;
 }
 
+.student-registration .no-padding {
+    padding: 0 !important;
+}
+.student-registration .no-margin {
+    margin: 0 !important;
+}
 .student-registration .gform_wrapper {
     width: 100% !important;
 }
-
 .student-registration .intro {
     border-radius: 20px;
     text-align: center;
@@ -1015,6 +1020,17 @@ p.warning {
     display: grid;
     align-items: center;
     justify-items: center;
+    padding: 30px 15px;
+}
+.page-template-dashboard-template #content .student-registration select,
+.page-template-dashboard-template #content .student-registration input[type=text],
+page-template-dashboard-template #content .student-registration input[type=date] {
+    color: #667085;
+}
+.page-template-dashboard-template #content .student-registration select {
+    line-height: 35px;
+    border-color: #D0D5DD;
+    border-radius: 8px;
 }
 .page-template-dashboard-template #content .student-registration .consent {
     text-align: center;
@@ -1055,9 +1071,11 @@ p.warning {
 .student-registration .gform-theme--framework .gfield--type-repeater .gfield_repeater_wrapper .gfield_repeater_container > legend {
     display: none;
 }
-.page-template-dashboard-template #content .gfield_repeater_wrapper  fieldset.gfield_repeater_container {
+.page-template-dashboard-template #content .gfield_repeater_wrapper fieldset.gfield_repeater_container,
+.page-template-dashboard-template #content .student-registration .bordered {
     border-radius: 20px;
-    border-color: #6DB2FF;
+    border: 1px solid #6DB2FF;
+    padding: 30px 50px;
 }
 .page-template-dashboard-template #content .student-registration .gfield_repeater_items .gfield_repeater_item .gfield_repeater_buttons .add_repeater_item {
     float: right;
@@ -1074,6 +1092,123 @@ p.warning {
 }
 .page-template-dashboard-template #content .student-registration .gform-theme-button.remove_repeater_item {
     background-color: #e75858;
+}
+
+.page-template-dashboard-template #content .student-registration .gform_page_footer,
+.student-registration .consent-required {
+    display: none;
+}
+.student-registration .product-wrapper {
+  display: flex;
+  gap: 50px;
+}
+.student-registration .product-container {
+  border-top: 3px solid;
+  width: 50%;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 4px 10px 0px #6DB2FF4D;
+}
+.student-registration .product-container:nth-of-type(1) {
+  border-top-color: #79E779;
+}
+.student-registration .product-container:nth-of-type(2) {
+  border-top-color: #FDA636;
+}
+.student-registration .product-container .product-title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 75px;
+  margin-top: 10px;
+}
+.student-registration .product-container:nth-of-type(1) .product-title::after {
+  background: #79E779;
+}
+.student-registration .product-container:nth-of-type(2) .product-title::after {
+  background: #FDA636;
+}
+.student-registration .product-price .woocommerce-Price-amount.amount {
+  margin-right: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #79E779;
+}
+.student-registration .product-price .subscription-details {
+    display: none;
+}
+.student-registration .short-description {
+  border-bottom: 1px solid #EAEAEA;
+}
+.student-registration .product-container .description ul {
+  padding-left: 0;
+  margin: 30px 0;
+}
+.student-registration .product-container .description ul > li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+.student-registration .product-container .short-description {
+    min-height: 40px;
+}
+.student-registration .product-container .short-description > p {
+    margin-bottom: 0;
+}
+.page-template-dashboard-template #content .student-registration .select-plan-button {
+  display: block;
+  text-align: center;
+  background: gray;
+  text-decoration: none;
+  padding: 15px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-family: 'Poppins';
+}
+.page-template-dashboard-template #content .student-registration .product-container:nth-of-type(1) .select-plan-button{
+  background-color: #79E779;
+}   
+.page-template-dashboard-template #content .student-registration .product-container:nth-of-type(2) .select-plan-button {
+  background-color: #FDA636;
+}
+.student-registration #gform_submit_button_4 {
+    opacity: 0;
+}
+.student-registration .gform-theme--foundation .gform_page_footer {
+    margin-top: 60px;
+}
+.student-registration .gform_page_footer .gform_previous_button {
+    float: left;
+}
+.student-registration .gform_page_footer .gform_next_button {
+    float: right;
+}
+.student-registration .parent-info-title-html h3 {
+    margin-bottom: 35px;
+}
+.student-registration .parent-info-field {
+    margin-bottom: 20px;
+}
+.student-registration .parent-info-field,
+.student-registration .acknowledgement-checkbox,
+.student-registration .centre-name-selection {
+    display: none;
+}
+.student-registration .acknowledgement-html {
+    background: #F6F5F0;
+    border-radius: 20px;
+    padding: 30px 90px;
+}
+.student-registration .acknowledgement-html p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.student-registration .acknowledgement-checkbox {
+    margin-bottom: 50px;
+}
+.page-template-dashboard-template #content .student-registration .acknowledgement-checkbox label {
+    margin-left: 50px;
 }
 
 @media (max-width: 1370px) {

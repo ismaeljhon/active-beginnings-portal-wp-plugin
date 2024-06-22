@@ -34,5 +34,49 @@
 
     // fixing date calendar input
     jQuery('.custom-date-js input[type=text]').attr('type', 'date')
+
+    jQuery('.select-plan-button').on('click', function (e) {
+      e.preventDefault();
+      jQuery('input[name=input_49]').val(jQuery(this).data('id'));
+
+      // set timeout to make sure the value has been set properly
+      jQuery('#gform_4').submit();
+      return false;
+    })
+
+    // hide consent required field 
+    const consentCheckbox = jQuery('.consent input[type=checkbox]')
+    const consentRequiredFields = jQuery('.gform_page_footer, .consent-required')
+
+    const consentRequiredFieldsInput = consentRequiredFields.find('select, input, button')
+
+    if (!consentCheckbox.is(':checked')) {
+      consentRequiredFieldsInput.attr('disabled', 'disabled')
+    }
+
+    setTimeout(() => {
+      const centreNameSelection = jQuery('.centre-name-selection')
+      const parentInfoField = jQuery('.parent-info-field')
+      const acknowledgementCheckbox = jQuery('.acknowledgement-checkbox')
+
+      // arrange the divs 
+      centreNameSelection.appendTo('.choose-centre-html')
+      parentInfoField.appendTo('.parent-info-title-html')
+      acknowledgementCheckbox.appendTo('.acknowledgement-html')
+
+      consentRequiredFields.show();
+      centreNameSelection.show()
+      parentInfoField.show()
+      acknowledgementCheckbox.show()
+    }, 1000);
+
+    consentCheckbox.on('click', function() {
+      if (jQuery(this).is(':checked')) {
+        consentRequiredFieldsInput.removeAttr('disabled')
+      } else {
+        consentRequiredFieldsInput.attr('disabled', 'disabled')
+      }
+    })
+
   })
 </script>

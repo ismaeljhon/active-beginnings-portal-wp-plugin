@@ -6,7 +6,9 @@ class Comworks_GF_StudentRegistration {
         add_filter( 'gform_form_post_get_meta_4', array( $this, 'add_child_fields' ) );
         add_filter( 'gform_form_update_meta_4', array( $this, 'remove_child_fields' ), 10, 3 );
         add_action( 'gform_after_submission_4', array( $this, 'student_registration' ), 10, 3 );
+        add_action( 'gform_after_submission_4', array( $this, 'process_payment' ), 10, 4 );
         add_action( 'gform_pre_submission_4', array( $this, 'student_registration_before_submit' ), 10, 3 );
+        add_filter( 'gform_pre_render_4', array( $this, 'setup_pricing_fields' ) );
     }
 
     function student_registration_before_submit($form) {
@@ -14,6 +16,67 @@ class Comworks_GF_StudentRegistration {
         // print_r($_POST);
         // echo '</pre>';
         // exit;
+    }
+
+    function process_payment ( $entry, $form ) {
+        $product_id = $entry['49'];
+        \WC()->cart->empty_cart();
+        \WC()->cart->add_to_cart( $product_id );
+        return $form;
+    }
+
+    function setup_pricing_fields( $form ) {
+        $field_id = 48; // make sure this is the correct field id
+
+        $product_subscription_query = new WP_Query( [
+            'post_type'      => 'product',
+            'posts_per_page' => 999,
+            'post_status'    => 'publish',
+            'orderby'        => 'id',
+            'order'          => 'ASC',
+            'tax_query'      => [
+                array(
+                    'taxonomy' => 'product_type',
+                    'field'    => 'name',
+                    'terms'    => 'subscription',
+                ) 
+            ],
+        ] );
+
+        foreach ($form['fields'] as &$field) {
+            if ($field['id'] == $field_id) {
+                $content = '<h3>Choose a plan</h3>';
+                
+                $content .= '<div class="product-wrapper">';
+
+                if ( $product_subscription_query->have_posts() ) {
+                    while($product_subscription_query->have_posts() ) {
+                        $product_subscription_query->the_post();
+                        $post_id = get_the_ID();
+                        $_product = wc_get_product( $post_id );
+
+                        $content .= '<div class="product-container">';
+                            $content .= '<h4 class="product-title">'. $_product->name .'</h4>';
+                            $content .= '<span class="product-price">' . $_product->get_price_html() . '</span>';
+                            $content .= '<span class="billing-type">' . get_post_meta( $post_id, 'billing_type', true ) . '</span>';
+                            $content .= '<div class="short-description">' . $_product->short_description  . '</div>';
+                            $content .= '<div class="description">' . $_product->description  . '</div>';
+                            $content .= '<a href="#" class="select-plan-button" data-id="' . $_product->id . '">Select Plan</a>';
+                        $content .= '</div>';
+                    }
+                } else {
+                    esc_html_e( 'Sorry, no posts matched your criteria.' );
+                }
+
+                $content .= '</div>';
+
+                // Restore original Post Data.
+                wp_reset_postdata();
+
+                $field->content = $content;
+            }
+        }
+        return $form;
     }
     
     function add_child_fields( $form ) { 
@@ -153,6 +216,7 @@ class Comworks_GF_StudentRegistration {
             'addButtonText'    => 'Add another child', // Optional
             'removeButtonText' => 'Remove child', // Optional
             'pageNumber'       => 0, // Ensure this is correct
+            'cssClass'         => 'consent-required',
             'fields'           => array ( 
                 $child_info_intro, 
                 $first_name, 
@@ -214,7 +278,7 @@ class Comworks_GF_StudentRegistration {
                 'sessions' => $sessions,
                 'status' => '',
             );
-            
+
             // TODO: Optimize this one later
             $this->create_student($user_data);
         }
