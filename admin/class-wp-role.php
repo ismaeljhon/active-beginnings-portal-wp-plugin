@@ -22,6 +22,16 @@ class Comworks_User_Role {
 
         // Set role capabilities
         $capabilities = array(
+            'read'         => true,
+            'edit_posts'   => true,
+            'upload_files' => false,
+        );
+    
+        // Add the role
+        add_role( 'parent_pending_role', 'Parent - pending', $capabilities );
+
+        // Set role capabilities
+        $capabilities = array(
             'edit_posts' => true,
             'delete_posts' => true,
             'edit_pages' => true,
