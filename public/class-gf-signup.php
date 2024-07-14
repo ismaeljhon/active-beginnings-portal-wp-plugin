@@ -62,6 +62,8 @@ class Comworks_GF_Signup {
             return;
         }
 
+        $this->send_activation_email($email, $first_name);
+
         // add user record to fred (Portal)
         $user_data = array(
             'username' => $email,
